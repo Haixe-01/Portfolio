@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9F5F0;
+}
+
+main {
+    /* display: flex; */
+    padding: 20px;
+}
+
+.header-section {
+    display: flex;
+}
+
+.header-section header {
+    font-size: 3em;
+    color: #3B2F2F;
+    padding-left: 10px;
+    /* margin-left: auto; */
+}
+
+.navtags {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 20px;
+}
+
+.navtags a {
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #3B2F2F;
+    font-size: 1.5em;
+    padding: 10px;
+    /* padding-right: 25px; */
+    position: relative;
+}
+
+.navtags a:after {
+    content: "";
+    position: absolute;
+    background-color: #E07A5F;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s ease;
+}
+
+.navtags a:hover:after {
+    /* animation-name: up;
+    animation-duration: 1s; */
+
+    /* transform: translateY(-5%); */
+
+    width: 100%;
+
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.textsection {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    text-align: center;
+    color: #3B2F2F;
+}
+
+.intro-section h1 {
+    font-size: 3em;
+}
+
+.intro-section p {
+    font-size: 1.5em;
+}
+
+#image {
+    flex: 1;
+}
+
+#image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.intro-section button {
+    justify-content: center;
+    background-color: #F9F5F0;
+    border: 2px solid #E07A5F ;
+    font-size: 1.5em;
+    border-radius: 5px;
+    padding: 5px 15px;
+    position: relative;
+    z-index: 0;
+}
+
+.intro-section button:after {
+    position: absolute;
+    content: "";
+    background-color: #E07A5F;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    z-index: -1;
+    transform-origin: left;
+}
+
+.intro-section button:hover:after {
+    /* transform: translateY(-5%); */
+    /* width: 100%; */
+    transform: scaleX(1);
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.projects-section h1 {
+    text-align: center;
+    color: #3B2F2F;
+    font-size: 2.5em;
+}
+
+.project-description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.des1,
+.des2,
+.des3 {
+    font-size: 1.4em;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: hsl(33, 43%, 96%);
+    width: 400px;
+    box-shadow: 1px 1px 8px #3b2f2f;
+    transition: 0.3s ease;
+}
+
+.des1:hover,
+.des2:hover,
+.des3:hover {
+    transform: translateY(-5%);
+}
+
+.project-description h3 {
+    font-size: 1.5em;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.skills h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.skill {
+    box-shadow: 1px 1px 8px #3b2f2f;
+    height: 20%;
+    background-color: hsl(33, 43%, 96%);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.skill:hover {
+        transform: translateY(-5%);
+    }
+
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px, 40px;
+}
+
+.contact-section h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.contact-section i {
+    font-size: 3em;
+    text-align: center;
+    transition: 0.3s ease;
+
+}
+
+.socials {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials i:hover{
+     transform: translateY(-5%);
+}
+
+footer {
+    color: #F9F5F0;
+    background-color: #3B2F2F;
+    height: 40px;
+    font-size: 1.3em;
+    text-align: center;
+    padding-top: 1%;
+}
+
+/* @keyframes up{
+    to{transform: translatey(-10%)}
+} */
+
+@media screen and (max-width:600px) {
+    section {
+        width: 100%;
+    }
+}
